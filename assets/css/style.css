@@ -1,0 +1,70 @@
+:root {
+    --primary: #22a6b3;
+    --secondary: #f6e58d;
+    --tertiary: #dff9fb;
+    --light-dark: #95afc0;
+    --dark: #1e272e;
+    --border-radius: .3rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-dark);
+    margin: 0;
+    padding: 0;
+    color: var(--dark);
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.hero {
+    padding: 3% 4%;
+    font-family: 'Bangers', cursive;
+    background-color: var(--dark);
+    color: var(--secondary);
+}
+  
+.app-title {
+    font-size: 3rem;
+    background-color: var(--primary);
+    color: var(--dark);
+    padding: 0 10px;
+    display: inline-block;
+    border-radius: var(--border-radius);
+    box-shadow: 6px 5px var(--secondary);
+}
+
+/* CARDS */
+.card {
+    margin: 10px 0 20px 0;
+    background-color: var(--tertiary);
+    border: 3px solid var(--dark);
+    border-radius: var(--border-radius);
+}
+  
+.card-header {
+    font-family: 'Bangers', cursive;
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+
+.card-body {
+padding: 2.5%;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.date {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.card-deck .date-forecast {
+    color: var(--secondary);
+}
+

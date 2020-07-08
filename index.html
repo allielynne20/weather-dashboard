@@ -1,12 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha512-weZatQD41YXNCVn3Bvl2y1iAZqtH/Y+MlAQUwovog1iwj8cbSEpQMeErMnDp9CBlqIo0oxOcOF8GUEoOZYD4Zg=="
+        crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+        integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA=="
+        crossorigin="anonymous" />
+
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Document</title>
+
+    <title>Weather Dashboard</title>
 </head>
+
 <body>
+
+    <header class="hero">
+        <h1 class="app-title"><i class="fas fa-cloud-sun-rain"></i> Weather Dashboard </h1>
+    </header>
+
+    <main class="container">
+
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="card">
+                    <h3 class="card-header text-uppercase">Search By City</h3>
+                    <form id="city-form" class="card-body">
+                        <label class="form-label" for="city"></label>
+                        <input name="username" id="username" type="text" autofocus="true" class="form-input" />
+                        <button type="submit" class="btn"><i class="fas fa-search-location"></i></button>
+                    </form>
+                    <!-- List of the city search history -->
+                </div>
+            </div>
+
+            <div class="col-lg-9">
+                <div class="card">
+                    <h3 class="card-header text-uppercase"> Weather in Your City </h3>
+                    <div class="card-body">
+                        <h4 class="date">The Date</h4>
+                        <h4><i class="fas fa-cloud-sun-rain"></i> Weather Conditions</h4>
+                        <h4><i class="fas fa-temperature-high"></i> Temperature</h4>
+                        <h4><i class="far fa-grin-beam-sweat"></i> Humidity</h4>
+                        <h4><i class="fas fa-wind"></i> Wind Speed</h4>
+                        <h4><i class="fab fa-hotjar"></i> UV Index that has to change colors (Favorable, Moderate,
+                            Severe)
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-end">
+            <div class="col-lg-9">
+                <div class="card">
+                    <h3 class="card-header text-uppercase">Five Day Forecast:</h3>
+                    <div class="card-deck">
+                        <div class="card-body row">
+                            <div class="card text-white bg-info mb-3 col" style="max-width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="date-forecast">Date</h5>
+                                    <p class="forecast-icon"><i class="fas fa-cloud-sun"></i></p>
+                                    <h5 class="card-title">Temperature: </h5>
+                                    <p class="card-text"></p>
+                                    <h5 class="card-title">Humidity: </h5>
+                                    <p class="card-text"></p>
+                                </div>
+                            </div>
+                            <div class="card text-white bg-info mb-3 col" style="max-width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="date-forecast">Date</h5>
+                                    <p class="forecast-icon"><i class="fas fa-cloud-sun"></i></p>
+                                    <h5 class="card-title">Temperature: </h5>
+                                    <p class="card-text"></p>
+                                    <h5 class="card-title">Humidity: </h5>
+                                    <p class="card-text"></p>
+                                </div>
+                            </div>
+                            <div class="card text-white bg-info mb-3 col" style="max-width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="date-forecast">Date</h5>
+                                    <p class="forecast-icon"><i class="fas fa-cloud-sun"></i></p>
+                                    <h5 class="card-title">Temperature: </h5>
+                                    <p class="card-text"></p>
+                                    <h5 class="card-title">Humidity: </h5>
+                                    <p class="card-text"></p>
+                                </div>
+                            </div>
+                            <div class="card text-white bg-info mb-3 col" style="max-width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="date-forecast">Date</h5>
+                                    <p class="forecast-icon"><i class="fas fa-cloud-sun"></i></p>
+                                    <h5 class="card-title">Temperature: </h5>
+                                    <p class="card-text"></p>
+                                    <h5 class="card-title">Humidity: </h5>
+                                    <p class="card-text"></p>
+                                </div>
+                            </div>
+                            <div class="card text-white bg-info mb-3 col" style="max-width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="date-forecast">Date</h5>
+                                    <p class="forecast-icon"><i class="fas fa-cloud-sun"></i></p>
+                                    <h5 class="card-title">Temperature: </h5>
+                                    <p class="card-text"></p>
+                                    <h5 class="card-title">Humidity: </h5>
+                                    <p class="card-text"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
