@@ -71,11 +71,19 @@ h4 {
     font-weight: bolder;
 }
 
-.card-deck .date-forecast {
+.date-forecast {
     color: var(--secondary);
+    font-weight: bolder;
 }
 
 .imageicon {
-    max-width: 10%;
-    max-height: 10%;
+    width: 10%;
+    height: 10%;
 }
+
+.imagetoday {
+    width: 20%;
+    height: 20%;
+}
+
+/* INDEX */

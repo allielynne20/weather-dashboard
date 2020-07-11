@@ -30,13 +30,13 @@ var weatherSearch = function (cityname) {
             $("#today").empty();
 
             var card = $('<div>').addClass("card");
-            var cardBody = $('<div>').addClass("card-body");
+            var cardBody = $('<div>').addClass("card-body").attr("id", "uvi");
             var title = $("<h3>").addClass("card-header text-uppercase").text(response.name);
             var temp = $("<h4>").attr("id", "temp").text("Temperature: " + response.main.temp);
             var humid = $("<h4>").attr("id", "humid").text("Humidity: " + response.main.humidity + "%");
             var wind = $("<h4>").attr("id", "wind").text("Wind Speed: " + response.wind.speed + "mph");
             // var uv = $("<h4>").attr("id", "uv");
-            var img = $("<img>").attr("src", "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png");
+            var img = $("<img>").addClass("imagetoday").attr("src", "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png");
 
             cardBody.append(img, temp, humid, wind);
             card.append(title, cardBody);
@@ -80,9 +80,10 @@ var fiveDay = function (lattitude, longitude) {
                     var card = $('<div>').addClass("card text-white bg-info mb-3 col");
                     var cardBody = $('<div>').addClass("card-body row");
                     var date = $("<h5>").addClass("date-forecast").html(response.daily[i].dt);
+                    // var forecastDate = moment(date).format("DD/MM/YYYY");
                     var img = $("<img>").addClass("imageicon").attr("src", "https://openweathermap.org/img/w/" + response.daily[i].weather[0].icon + ".png");
                     var temp = $("<h5>").attr("id", "temp").addClass("date-forecast").text("Temperature: " + response.daily[i].temp.day);
-                    var humid = $("<h5>").attr("id", "humid").text("Humidity: " + response.daily[i].humidity + "%");
+                    var humid = $("<h5>").addClass("date-forecast").attr("id", "humid").text("Humidity: " + response.daily[i].humidity + "%");
 
                     card.append(cardBody);
                     cardBody.append(date, img, temp, humid);
@@ -90,6 +91,10 @@ var fiveDay = function (lattitude, longitude) {
 
                 }
             }
+
+            var uvIndex = $("<h4>").attr("id", "uv-index").text("UV Index: " + response.current.uvi);
+            $("#uvi").append(uvIndex);
+
         })
 }
 
