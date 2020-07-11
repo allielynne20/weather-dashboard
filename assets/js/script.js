@@ -81,8 +81,8 @@ var fiveDay = function (lattitude, longitude) {
                     var cardBody = $('<div>').addClass("card-body row");
                     var date = $("<h5>").addClass("date-forecast").html(response.daily[i].dt);
                     var img = $("<img>").addClass("imageicon").attr("src", "https://openweathermap.org/img/w/" + response.daily[i].weather[0].icon + ".png");
-                    var temp = $("<h5>").attr("id", "temp").addClass("date-forecast").text(response.daily[i].temp.day);
-                    var humid = $("<h5>").attr("id", "humid").text(response.daily[i].humidity);
+                    var temp = $("<h5>").attr("id", "temp").addClass("date-forecast").text("Temperature: " + response.daily[i].temp.day);
+                    var humid = $("<h5>").attr("id", "humid").text("Humidity: " + response.daily[i].humidity + "%");
 
                     card.append(cardBody);
                     cardBody.append(date, img, temp, humid);
@@ -105,7 +105,7 @@ $("#button").on("click", function () {
 $("#citySubmit").on("click", function () {
     $("#cityname").html("cityname");
     localStorage.getItem("cityname");
-    
+
     // cityname.value = "";
     // weatherSearch(cityname);
 })
