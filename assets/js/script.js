@@ -105,7 +105,4 @@ $("#button").on("click", function () {
 $("#citySubmit").on("click", function () {
     $("#cityname").html("cityname");
     localStorage.getItem("cityname");
-
-    // cityname.value = "";
-    // weatherSearch(cityname);
 })
