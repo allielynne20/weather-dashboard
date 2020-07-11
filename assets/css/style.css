@@ -37,6 +37,12 @@ body {
     box-shadow: 6px 5px var(--secondary);
 }
 
+.lead {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
 /* CARDS */
 .card {
     margin: 10px 0 20px 0;
@@ -69,3 +75,7 @@ h4 {
     color: var(--secondary);
 }
 
+.imageicon {
+    max-width: 10%;
+    max-height: 10%;
+}
