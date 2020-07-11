@@ -13,10 +13,10 @@ The purpose of this web page is to allow the user to search any city in the US a
 * Open Weather Map Server API's 
 
 ## Page Layout
-![Weather Dashboard](./capture.png)
+![Weather Dashboard](./assets/capture.png)
 
 ## Website
-https://allielynne20.github.io/wk-five-challenge/
+https://allielynne20.github.io/weather-dashboard/
 
 
 
