@@ -111,3 +111,7 @@ $("#citySubmit").on("click", function () {
     $("#cityname").html("cityname");
     localStorage.getItem("cityname");
 })
+
+// so instead of doing localStorage.setItem('cityname', currentCity)
+// I might do localStorage.setItem('cities', JSON.stringify(arrayOfCities))
+// and read it out with let cities = JSON.parse(localStorage.getItem('cities'))
