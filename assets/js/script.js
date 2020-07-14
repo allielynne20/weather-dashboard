@@ -17,7 +17,7 @@ $("#button").on("click", function () {
 })
 
 var weatherSearch = function (cityname) {
-    var weatherCondition = 'http://api.openweathermap.org/data/2.5/weather?q=' + cityname + '&appid=fe4831ea04035583e11d878e5799c1d9&units=imperial';
+    var weatherCondition = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityname + '&appid=fe4831ea04035583e11d878e5799c1d9&units=imperial';
     $.ajax({
         type: "GET",
         url: weatherCondition,
